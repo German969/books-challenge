@@ -2,9 +2,9 @@
   "name": "books-challenge",
   "version": "1.0.0",
   "description": "This repository holds an Express application with challenges to complete",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/German969/books-challenge/issues"
   },
-  "homepage": "https://github.com/German969/books-challenge#readme"
+  "homepage": "https://github.com/German969/books-challenge#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
 }
