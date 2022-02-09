@@ -1,3 +1,7 @@
+CREATE DATABASE library;
+
+USE library;
+
 CREATE TABLE Authors (
     Id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(70) NOT NULL,
@@ -68,7 +72,7 @@ CREATE TABLE Categories (
 );
 
 INSERT INTO Categories
-    (Category)
+    (Name)
 VALUES
     ('Standard'),
     ('Admin')

@@ -2,10 +2,11 @@ const db = require('../database/models');
 
 const mainController = {
   home: (req, res) => {
-    db.Book.findAll()
+    db.Book.findAll({
+      include: [{ association: 'authors' }]
+    })
       .then((books) => {
-        res.send(books);
-        /* res.render('home', books); */
+        res.render('home', { books });
       })
       .catch((error) => console.log(error));
   },
