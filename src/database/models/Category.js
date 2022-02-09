@@ -16,5 +16,13 @@ module.exports = (sequelize, dataTypes) => {
   };
 
   const Categories = sequelize.define(alias, cols, config);
+
+  Categories.associate = function (models) {
+    Categories.belongsTo (models.Users, {
+        as: "user",
+        foreingKey: "id"
+    })
+  }
+
   return Categories;
 };
