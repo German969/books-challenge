@@ -37,10 +37,12 @@ VALUES
 ;
 
 CREATE TABLE BooksAuthors (
+    Id INT NOT NULL AUTO_INCREMENT,
     AuthorId INT NOT NULL,
     BookId  INT NOT NULL,
     FOREIGN KEY (AuthorId) REFERENCES Authors(Id),
-    FOREIGN KEY (BookId) REFERENCES Books(Id)
+    FOREIGN KEY (BookId) REFERENCES Books(Id),
+    PRIMARY KEY(Id)
 );
 
 INSERT INTO BooksAuthors
@@ -57,4 +59,39 @@ VALUES
     (7, 6),
     (7, 7),
     (7, 8)
+;
+
+CREATE TABLE Categories (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Category VARCHAR(70),
+    PRIMARY KEY(Id)
+);
+
+INSERT INTO Categories
+    (Category)
+VALUES
+    ('Adventure'),
+    ('Mystery'),
+    ('Fiction')
+;
+
+CREATE TABLE Users (
+    Id INT NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(70) NOT NULL,
+    Country VARCHAR(100) NOT NULL,
+    Pass VARCHAR(100),
+    CategoryId INT NOT NULL,
+    PRIMARY KEY(Id),
+    FOREIGN KEY (CategoryId) REFERENCES Categories(Id)
+);
+
+INSERT INTO Users
+    (Name, Country, Pass, CategoryId)
+VALUES
+    ('Cynthia Bowman', 'USA', '1234', 2),
+    ('Hanley Rios', 'USA', '1234', 1),
+    ('Rowena Twitty', 'USA', '1234', 3),
+    ('Fabian Webster', 'India', '1234', 1),
+    ('Harper Mann', 'USA', '1234', 2),
+    ('Christian Wenz', 'USA', '1234', 2)
 ;
