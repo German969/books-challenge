@@ -63,7 +63,7 @@ VALUES
 
 CREATE TABLE Categories (
     Id INT NOT NULL AUTO_INCREMENT,
-    Category VARCHAR(70),
+    Name VARCHAR(70),
     PRIMARY KEY(Id)
 );
 
