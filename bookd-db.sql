@@ -70,9 +70,8 @@ CREATE TABLE Categories (
 INSERT INTO Categories
     (Category)
 VALUES
-    ('Adventure'),
-    ('Mystery'),
-    ('Fiction')
+    ('Standard'),
+    ('Admin')
 ;
 
 CREATE TABLE Users (
