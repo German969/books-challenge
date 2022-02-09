@@ -89,7 +89,7 @@ INSERT INTO Users
 VALUES
     ('Cynthia Bowman', 'USA', '1234', 2),
     ('Hanley Rios', 'USA', '1234', 1),
-    ('Rowena Twitty', 'USA', '1234', 3),
+    ('Rowena Twitty', 'USA', '1234', 1),
     ('Fabian Webster', 'India', '1234', 1),
     ('Harper Mann', 'USA', '1234', 2),
     ('Christian Wenz', 'USA', '1234', 2)
