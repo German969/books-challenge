@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Books';
+    let alias = 'Book';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -17,10 +17,10 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'books',
         timestamps: false
     }
-    const User = sequelize.define(alias, cols, config);
+    const Book = sequelize.define(alias, cols, config);
 
-    User.associate = function (models) {
-        Books.belongsToMany (models.Authors, {
+    Book.associate = function (models) {
+        Book.belongsToMany (models.Authors, {
             as: "bookAuthor",
             through: "booksauthors",
             foreingKey: "BookId",
@@ -29,5 +29,5 @@ module.exports = (sequelize, dataTypes) => {
         })
     } 
 
-    return User;
+    return Book;
 }
