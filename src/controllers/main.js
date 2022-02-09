@@ -3,3 +3,5 @@ const mainController = {
     res.render('home');
   }
 };
+
+module.exports = mainController;
