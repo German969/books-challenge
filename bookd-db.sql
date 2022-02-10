@@ -25,19 +25,20 @@ VALUES
 CREATE TABLE Books (
     Id INT NOT NULL AUTO_INCREMENT,
     Title VARCHAR(50) NOT NULL,
+    Cover VARCHAR(200),
     PRIMARY KEY(Id)
 );
 
 INSERT INTO Books
-    (Id, Title)
+    (Id, Title, Cover)
 VALUES
-    (1, 'The Catcher in the Rye'),
-    (2, 'Nine Stories'),
-    (3, 'Franny and Zooey'),
-    (4, 'The Great Gatsby'),
-    (5, 'Tender id the Night'),
-    (6, 'Pride and Prejudice'),
-    (7, 'Professional ASP.NET 4.5 in C# and VB')
+    (1, 'The Catcher in the Rye', 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Catcher-in-the-rye-red-cover.jpg'),
+    (2, 'Nine Stories', 'https://m.media-amazon.com/images/I/41B2f5VvjVL.jpg'),
+    (3, 'Franny and Zooey', 'https://upload.wikimedia.org/wikipedia/commons/7/72/Frannyzoey.jpg'),
+    (4, 'The Great Gatsby', 'https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg'),
+    (5, 'Tender id the Night', 'https://upload.wikimedia.org/wikipedia/commons/2/25/Tender_Is_the_Night_%281934_1st_ed_dust_jacket%29.jpg'),
+    (6, 'Pride and Prejudice', 'https://almabooks.com/wp-content/uploads/2016/10/9781847493699.jpg'),
+    (7, 'Professional ASP.NET 4.5 in C# and VB', 'https://media.wiley.com/product_data/coverImage300/59/11183320/1118332059.jpg')
 ;
 
 CREATE TABLE BooksAuthors (

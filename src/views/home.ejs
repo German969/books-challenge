@@ -11,62 +11,30 @@
 </head>
 <body>
   <div class="container">
-    <div class="container">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-  
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/" class="nav-link px-2 link-secondary">Books</a></li>
-          <li><a href="/authors" class="nav-link px-2 link-dark">Authors</a></li>
-        </ul>
-  
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2">Login</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
-        </div>
-      </header>
-    </div>
+    <%- include('partials/header.ejs') %>
 
     <div class="container">
-    <div class="list-group">
-      <% {books.map((book) => { %>
-        <a href="/books/detail/<%= book.Id %>" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-          <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-          <div class="d-flex gap-2 w-100 justify-content-between">
-            <div>
-              <h6 class="mb-0"><%= book.title %></h6>
-              <p class="mb-0 opacity-75">
-                <% book.authors.map((author, index) => { %>
-                  <%= `${author.Name}${(index === book.authors.length - 1) ? '.' : ', '}` %>
-                <% }) %>
-              </p>
+      <div class="list-group">
+        <% {books.map((book) => { %>
+          <a href="/books/detail/<%= book.id %>" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/VisualEditor_-_Icon_-_Open-book-2.svg/1024px-VisualEditor_-_Icon_-_Open-book-2.svg.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0"><%= book.title %></h6>
+                <p class="mb-0 opacity-75">
+                  <% book.authors.map((author, index) => { %>
+                    <%= `${author.Name}${(index === book.authors.length - 1) ? '.' : ', '}` %>
+                  <% }) %>
+                </p>
+              </div>
             </div>
-            <small class="opacity-50 text-nowrap">now</small>
-          </div>
-        </a>
-      <% })} %>
-    </div>
+          </a>
+        <% })} %>
+      </div>
   </div>
 </div>
 
 
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <span class="text-muted">© 2021 Company, Inc</span>
-      </div>
-  
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
-    </footer>
-  </div>
+<%- include('partials/footer.ejs') %>
 </body>
 </html>
