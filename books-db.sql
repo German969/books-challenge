@@ -82,6 +82,7 @@ VALUES
 CREATE TABLE Users (
     Id INT NOT NULL AUTO_INCREMENT,
     Name VARCHAR(70) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
     Country VARCHAR(100) NOT NULL,
     Pass VARCHAR(100),
     CategoryId INT NOT NULL,
@@ -90,12 +91,12 @@ CREATE TABLE Users (
 );
 
 INSERT INTO Users
-    (Name, Country, Pass, CategoryId)
+    (Name, Email, Country, Pass, CategoryId)
 VALUES
-    ('Cynthia Bowman', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 2),
-    ('Hanley Rios', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 1),
-    ('Rowena Twitty', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 1),
-    ('Fabian Webster', 'India', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 1),
-    ('Harper Mann', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 2),
-    ('Christian Wenz', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 2)
+    ('Cynthia Bowman','Cynthia@gmail.com', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 2),
+    ('Hanley Rios', 'Hanley@gmail.com', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 1),
+    ('Rowena Twitty', 'Rowena@gmail.com', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 1),
+    ('Fabian Webster', 'Fabian@gmail.com', 'India', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 1),
+    ('Harper Mann', 'Harper@gmail.com', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 2),
+    ('Christian Wenz', 'Christian@gmail.com', 'USA', '$2a$10$6a6hr260zNMZ1DtF0/Ouj.L0sKn12S48OdTSrrJJrdY/2DCqSsiBu', 2)
 ;

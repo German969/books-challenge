@@ -27,6 +27,7 @@ const mainController = {
   processRegister: (req, res) => {
     db.User.create({
       Name: req.body.name,
+      Email: req.body.email,
       Country: req.body.country,
       Pass: bcryptjs.hashSync(req.body.password, 10),
       CategoryId: req.body.category
@@ -35,6 +36,9 @@ const mainController = {
       res.redirect("/")
     })
     .catch((error) => console.log(error));
+  },
+  login: (req, res) => {
+    res.render('login');
   },
 };
 

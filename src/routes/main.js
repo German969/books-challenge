@@ -9,5 +9,6 @@ router.get('/books/search', mainController.bookSearch);
 router.get('/authors', mainController.authors);
 router.get('/register', mainController.register);
 router.post('/register', mainController.processRegister);
+router.get('/login', mainController.login);
 
 module.exports = router;
