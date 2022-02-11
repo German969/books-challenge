@@ -38,4 +38,3 @@ La app tiene 3 secciones principales
 - Terminar de implementar la vista de libros de un autor, con ruta y controlador (sin funcionalidad)
 - Crear formulario de edicion de libros, con ruta y controlador (sin funcionalidad)
 - Crear ruta y controlador para eliminacion de libros (sin funcionalidad)
-- Crear vista de login, con ruta y controlador (sin funcionalidad)

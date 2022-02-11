@@ -40,6 +40,9 @@ const mainController = {
   login: (req, res) => {
     res.render('login');
   },
+  processLogin: (req, res) => {
+    res.send('Edit this');
+  },
 };
 
 module.exports = mainController;
