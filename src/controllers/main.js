@@ -1,3 +1,4 @@
+const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
 
 const mainController = {
@@ -19,7 +20,22 @@ const mainController = {
   },
   authors: (req, res) => {
     res.render('authors');
-  }
+  },
+  register: (req, res) => {
+    res.render('register');
+  },
+  processRegister: (req, res) => {
+    db.User.create({
+      Name: req.body.name,
+      Country: req.body.country,
+      Pass: bcryptjs.hashSync(req.body.password, 10),
+      CategoryId: req.body.category
+    })
+    .then(() => {
+      res.redirect("/")
+    })
+    .catch((error) => console.log(error));
+  },
 };
 
 module.exports = mainController;

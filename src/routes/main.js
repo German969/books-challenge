@@ -7,5 +7,7 @@ router.get('/', mainController.home);
 router.get('/books/detail/:id', mainController.bookDetail);
 router.get('/books/search', mainController.bookSearch);
 router.get('/authors', mainController.authors);
+router.get('/register', mainController.register);
+router.post('/register', mainController.processRegister);
 
 module.exports = router;

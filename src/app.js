@@ -3,6 +3,9 @@ const mainRouter = require('./routes/main');
 
 const app = express();
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
 
