@@ -15,8 +15,11 @@
 
     <div class="container">
 
-      <form class="col-12 col-lg-auto mb-3 me-lg-3">
-        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      <form action="/books/search" method="POST" class="col-12 col-lg-auto mb-3 me-lg-3" _lpchecked="1">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Book Title..." name="title">
+          <button type="submit" class="btn btn-secondary">Search</button>
+        </div>
       </form>
 
 

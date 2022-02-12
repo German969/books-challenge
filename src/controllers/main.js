@@ -16,6 +16,10 @@ const mainController = {
     res.render('bookDetail');
   },
   bookSearch: (req, res) => {
+    res.render('search', { books: [] });
+  },
+  bookSearchResult: (req, res) => {
+    // Implement search by title
     res.render('search');
   },
   authors: (req, res) => {
@@ -32,17 +36,17 @@ const mainController = {
       Pass: bcryptjs.hashSync(req.body.password, 10),
       CategoryId: req.body.category
     })
-    .then(() => {
-      res.redirect("/")
-    })
-    .catch((error) => console.log(error));
+      .then(() => {
+        res.redirect('/');
+      })
+      .catch((error) => console.log(error));
   },
   login: (req, res) => {
     res.render('login');
   },
   processLogin: (req, res) => {
     res.send('Edit this');
-  },
+  }
 };
 
 module.exports = mainController;

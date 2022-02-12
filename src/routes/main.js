@@ -6,6 +6,7 @@ const router = express.Router();
 router.get('/', mainController.home);
 router.get('/books/detail/:id', mainController.bookDetail);
 router.get('/books/search', mainController.bookSearch);
+router.post('/books/search', mainController.bookSearchResult);
 router.get('/authors', mainController.authors);
 router.get('/register', mainController.register);
 router.post('/register', mainController.processRegister);

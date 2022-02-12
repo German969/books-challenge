@@ -21,7 +21,7 @@ La app tiene 3 secciones principales
 
 ## Desafios
 1. Implementar la vista de detalle de un libro. Para ello debemos buscar en la base de datos el libro cuyo Id sea igual al que se envia por parametro en la ruta de nuestro endpoint y actualizar la vista `bookDetail.ejs` para recibir y mostrar estos datos.
-2. Busqueda de libros: Desarrollar la funcionalidad de busqueda, para esto utilizaremos el formulario de busqueda que se encuentra en las vistas de `home.ejs` y `search.ejs`. Debemos escuchar las peticiones POST sobre la ruta `/books/search` y con el campo `title` del body buscar en la base de datos los libros que tengan un titulo similar.
+2. Busqueda de libros: Desarrollar la funcionalidad de busqueda, para esto utilizaremos el formulario de busqueda que se encuentra en la vista de `search.ejs`. Debemos escuchar las peticiones POST sobre la ruta `/books/search` y con el campo `title` del body buscar en la base de datos los libros que tengan un titulo similar.
 3. Libros de un autor: implementar la vista de `authorBooks.ejs` a la cual llegamos haciendo click en un autor, esta vista debera listar todos los libros de un determinado autor en particular, leyendo su Id por parametro.
 4. Edicion de libros: Implementar el formulario de edicion de libros, tener en cuenta que solo un usuario administrador debera tener acceso a esta funcionalidad (ocultar el boton para usuarios comunes)
 5. Eliminacion de libros: Implementar el boton de eliminacion en el detalle de libros, tener en cuenta que solo los usuarios administradores pueden realizar esta accion.
@@ -33,8 +33,6 @@ La app tiene 3 secciones principales
 
 
 ### TODO
-- Agregar descripciones a los libros
-- Terminar de implementar la vista formulario de busqueda, con ruta y controlador (sin funcionalidad, incluir tambien en home)
 - Terminar de implementar la vista de libros de un autor, con ruta y controlador (sin funcionalidad)
 - Crear formulario de edicion de libros, con ruta y controlador (sin funcionalidad)
 - Crear ruta y controlador para eliminacion de libros (sin funcionalidad)
