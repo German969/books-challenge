@@ -22,8 +22,21 @@ const mainController = {
     // Implement search by title
     res.render('search');
   },
+  deleteBook: (req, res) => {
+    // Implement delete book
+    res.render('home');
+  },
   authors: (req, res) => {
-    res.render('authors');
+    db.Author.findAll()
+      .then((authors) => {
+        console.log(authors);
+        res.render('authors', { authors });
+      })
+      .catch((error) => console.log(error));
+  },
+  authorBooks: (req, res) => {
+    // Implement books by author
+    res.render('authorBooks');
   },
   register: (req, res) => {
     res.render('register');

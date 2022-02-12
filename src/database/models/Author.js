@@ -1,15 +1,15 @@
 module.exports = (sequelize, dataTypes) => {
   let alias = 'Author';
   let cols = {
-    Id: {
+    id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    Name: {
+    name: {
       type: dataTypes.STRING
     },
-    Country: {
+    country: {
       type: dataTypes.STRING
     }
   };
