@@ -7,6 +7,7 @@ const mainController = {
       include: [{ association: 'authors' }]
     })
       .then((books) => {
+        /* res.send(books); */
         res.render('home', { books });
       })
       .catch((error) => console.log(error));
