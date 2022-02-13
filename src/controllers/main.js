@@ -58,7 +58,13 @@ const mainController = {
     res.render('login');
   },
   processLogin: (req, res) => {
-    res.send('Edit this');
+    res.send('Login process (edit in controller main.js)');
+  },
+  edit: (req, res) => {
+    res.render('editBook', {id: req.params.id})
+  },
+  processEdit: (req, res) => {
+    res.send('Edit book ' + req.params.id + ' process (edit in controller main.js)')
   }
 };
 

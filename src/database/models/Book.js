@@ -13,6 +13,9 @@ module.exports = (sequelize, dataTypes) => {
     },
     cover: {
       type: dataTypes.STRING
+    },
+    description: {
+      type: dataTypes.STRING
     }
   };
   let config = {
