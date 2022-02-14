@@ -7,13 +7,12 @@ const mainController = {
       include: [{ association: 'authors' }]
     })
       .then((books) => {
-        /* res.send(books); */
         res.render('home', { books });
       })
       .catch((error) => console.log(error));
   },
   bookDetail: (req, res) => {
-    // TODO look for details in the database
+    // Implement look for details in the database
     res.render('bookDetail');
   },
   bookSearch: (req, res) => {
@@ -30,7 +29,6 @@ const mainController = {
   authors: (req, res) => {
     db.Author.findAll()
       .then((authors) => {
-        console.log(authors);
         res.render('authors', { authors });
       })
       .catch((error) => console.log(error));
@@ -56,16 +54,20 @@ const mainController = {
       .catch((error) => console.log(error));
   },
   login: (req, res) => {
+    // Implement login process
     res.render('login');
   },
   processLogin: (req, res) => {
-    res.send('Login process (edit in controller main.js)');
+    // Implement login process
+    res.render('home');
   },
   edit: (req, res) => {
+    // Implement edit book
     res.render('editBook', {id: req.params.id})
   },
   processEdit: (req, res) => {
-    res.send('Edit book ' + req.params.id + ' process (edit in controller main.js)')
+    // Implement edit book
+    res.render('home');
   }
 };
 
